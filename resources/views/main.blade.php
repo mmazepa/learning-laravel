@@ -11,5 +11,8 @@
        <form action="/subpage/HelloWorld!">
            <input type="submit" value="HelloWorld!" />
        </form>
+       <form action="/subpage/">
+           <input type="submit" value="Anonymous...?" />
+       </form>
     </body>
 </html>

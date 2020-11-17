@@ -17,9 +17,13 @@ Route :: get ('/', function () {
    return view('main');
 });
 
-Route :: get ('subpage/{id}', function ($id) {
-    echo 'Subpage ID: '.$id;
-    // echo '<br/><button onClick="location.href=/">back</button>';
+Route :: get ('subpage/{id?}', function ($id = null) {
+    if ($id == null) {
+        echo 'Hello, Anonymous Guest!';
+    } else {
+        echo 'Subpage ID: '.$id;
+    }
+
     echo'<form action="/">';
     echo'    <input type="submit" value="Back" />';
     echo'</form>';
